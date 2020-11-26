@@ -27,13 +27,13 @@
                         <p:ajax event="rowSelect"   update="createButton viewButton editButton deleteButton"/>
                         <p:ajax event="rowUnselect" update="createButton viewButton editButton deleteButton"/>
 
-                        <p:column>
+                        <p:column sortBy="#{item.orderID}">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListOrdersTitle_orderID}"/>
                             </f:facet>
                             <h:outputText value="#{item.orderID}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.orderDate}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListOrdersTitle_orderDate}"/>
                             </f:facet>
@@ -41,7 +41,7 @@
                                 <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
                             </h:outputText>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.requiredDate}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListOrdersTitle_requiredDate}"/>
                             </f:facet>
@@ -49,7 +49,7 @@
                                 <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
                             </h:outputText>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.shippedDate}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListOrdersTitle_shippedDate}"/>
                             </f:facet>
@@ -57,43 +57,43 @@
                                 <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
                             </h:outputText>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.freight}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListOrdersTitle_freight}"/>
                             </f:facet>
                             <h:outputText value="#{item.freight}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.shipName}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListOrdersTitle_shipName}"/>
                             </f:facet>
                             <h:outputText value="#{item.shipName}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.shipAddress}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListOrdersTitle_shipAddress}"/>
                             </f:facet>
                             <h:outputText value="#{item.shipAddress}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.shipCity}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListOrdersTitle_shipCity}"/>
                             </f:facet>
                             <h:outputText value="#{item.shipCity}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.shipRegion}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListOrdersTitle_shipRegion}"/>
                             </f:facet>
                             <h:outputText value="#{item.shipRegion}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.shipPostalCode}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListOrdersTitle_shipPostalCode}"/>
                             </f:facet>
                             <h:outputText value="#{item.shipPostalCode}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.shipCountry}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListOrdersTitle_shipCountry}"/>
                             </f:facet>
