@@ -27,31 +27,31 @@
                         <p:ajax event="rowSelect"   update="createButton viewButton editButton deleteButton"/>
                         <p:ajax event="rowUnselect" update="createButton viewButton editButton deleteButton"/>
 
-                        <p:column>
+                        <p:column sortBy="#{item.employeeID}">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEmployeesTitle_employeeID}"/>
                             </f:facet>
                             <h:outputText value="#{item.employeeID}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.lastName}" filterMatchMode="contains" >
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEmployeesTitle_lastName}"/>
                             </f:facet>
                             <h:outputText value="#{item.lastName}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.firstName}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEmployeesTitle_firstName}"/>
                             </f:facet>
                             <h:outputText value="#{item.firstName}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.title}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEmployeesTitle_title}"/>
                             </f:facet>
                             <h:outputText value="#{item.title}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.titleOfCourtesy}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEmployeesTitle_titleOfCourtesy}"/>
                             </f:facet>
@@ -73,37 +73,37 @@
                                 <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
                             </h:outputText>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.address}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEmployeesTitle_address}"/>
                             </f:facet>
                             <h:outputText value="#{item.address}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.city}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEmployeesTitle_city}"/>
                             </f:facet>
                             <h:outputText value="#{item.city}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.region}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEmployeesTitle_region}"/>
                             </f:facet>
                             <h:outputText value="#{item.region}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.postalCode}" filterMatchMode="contains"> 
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEmployeesTitle_postalCode}"/>
                             </f:facet>
                             <h:outputText value="#{item.postalCode}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.country}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEmployeesTitle_country}"/>
                             </f:facet>
                             <h:outputText value="#{item.country}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.homePhone}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEmployeesTitle_homePhone}"/>
                             </f:facet>
@@ -133,7 +133,7 @@
                             </f:facet>
                             <h:outputText value="#{item.photoPath}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.salary}" filterMatchMode="contains">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEmployeesTitle_salary}"/>
                             </f:facet>
